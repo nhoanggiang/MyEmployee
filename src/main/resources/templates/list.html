@@ -14,11 +14,11 @@
 			<span th:text="${success}"></span>
 		</div>
 		<div class="row">
-			<a th:href="@{/employee/create}" class="btn btn-success pull-left">
+			<a th:href="@{/create}" class="btn btn-success pull-left">
 				<span class="glyphicon glyphicon-plus"></span> Add new employee
 			</a>
 			<form class="form-inline pull-right" action="#"
-				th:action="@{/employee/search}" method="GET">
+				th:action="@{/search}" method="GET">
 				<div class="form-group">
 					<input type="text" class="form-control" name="s"
 						placeholder="Type employee name..." />
@@ -47,9 +47,9 @@
 							<td th:text="${iterStat.count}"></td>
 							<td th:text="${contact.name}"></td>
 							<td th:text="${contact.phone}"></td>
-							<td><a th:href="@{/employee/{id}/edit(id=${contact.id})}"><span
+							<td><a th:href="@{/{id}/edit(id=${contact.id})}"><span
 									class="glyphicon glyphicon-pencil"></span></a></td>
-							<td><a th:href="@{/employee/{id}/delete(id=${contact.id})}"><span
+							<td><a th:href="@{/{id}/delete(id=${contact.id})}"><span
 									class="glyphicon glyphicon-trash"></span></a></td>
 						</tr>
 					</tbody>
